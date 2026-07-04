@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy &amp; Terms — Elastica</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="Privacy Policy and Terms & Conditions for the Elastica website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#3B2A52;--violet:#7B5CA6;--violet-deep:#4E3670;--violet-soft:#9A80C4;
+    --lavender:#F3ECFB;--sage:#6FA98A;--sage-deep:#4C8A6C;--sage-pale:#E8F4EE;
+    --paper:#FFFDFA;--text:#5B5468;--text-soft:#847CA0;--border:#E9E1F5;
+    --shadow-sm:0 2px 12px rgba(59,42,82,.08);--shadow-md:0 12px 32px rgba(59,42,82,.14);
+    --r-sm:12px;--r-md:20px;--r-lg:32px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Karla',sans-serif;color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;color:var(--ink);line-height:1.2;font-weight:600;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  a:focus-visible,button:focus-visible{outline:2.5px solid var(--sage-deep);outline-offset:3px;border-radius:6px;}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;padding:14px 30px;border-radius:999px;border:none;transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap;}
+  .btn-primary{background:linear-gradient(135deg,var(--violet),var(--violet-deep));color:#fff;box-shadow:var(--shadow-md);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(59,42,82,.22);}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1160px;margin:0 auto;}
+  .logo{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px;}
+  .logo svg{width:26px;height:26px;}
+  .nav-links{display:flex;align-items:center;gap:36px;}
+  .nav-links a{font-weight:600;font-size:15px;color:var(--ink);}
+  .burger{display:none;background:none;border:none;padding:6px;}
+  .burger svg{width:26px;height:26px;color:var(--ink);}
+  .mobile-menu{display:none;flex-direction:column;gap:2px;padding:8px 24px 20px;border-top:1px solid var(--border);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:12px 0;font-weight:600;color:var(--ink);border-bottom:1px solid var(--border);}
+  .mobile-menu .btn{margin-top:14px;}
+  @media (max-width:860px){.nav-links{display:none;}.burger{display:block;}}
+
+  .page-hero{background:var(--lavender);padding:64px 0 52px;text-align:center;}
+  .page-hero h1{font-size:clamp(32px,5vw,46px);margin-bottom:10px;}
+  .page-hero p{color:var(--text-soft);font-size:15.5px;}
+
+  .prose{max-width:700px;margin:0 auto;padding:64px 24px 96px;}
+  .prose h2{font-size:21px;margin:34px 0 12px;}
+  .prose h2:first-of-type{margin-top:0;}
+  .prose p{margin-bottom:16px;font-size:15.5px;color:var(--text);}
+  .callout{background:var(--sage-pale);border:1px solid var(--sage);border-radius:var(--r-sm);padding:18px 22px;margin-bottom:16px;font-size:15px;color:var(--ink);}
+  .part-divider{border:none;border-top:2px solid var(--border);margin:56px 0 32px;}
+  .part-title{font-size:28px;margin-bottom:6px;}
+  .part-date{color:var(--text-soft);font-size:14px;margin-bottom:30px;}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.72);padding:56px 0;}
+  .footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;margin-bottom:36px;}
+  .footer-logo{font-family:'Fraunces',serif;font-size:22px;color:#fff;}
+  .footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+  .footer-links a{font-size:14px;font-weight:600;color:rgba(255,255,255,.8);}
+  .footer-links a:hover{color:#fff;}
+  .disclosure{font-size:13px;line-height:1.7;color:rgba(255,255,255,.55);max-width:720px;border-top:1px solid rgba(255,255,255,.15);padding-top:24px;margin-bottom:18px;}
+  .copyright{font-size:12.5px;color:rgba(255,255,255,.45);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="logo" aria-label="Elastica home">
+      Elastica
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a class="btn btn-primary" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">Order Now</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="privacy-policy.html">Privacy Policy &amp; Terms</a>
+    <a class="btn btn-primary" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">Order Now</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Privacy Policy &amp; Terms &amp; Conditions</h1>
+    <p>Last updated: 25 May 2018</p>
+  </div>
+</section>
+
+<div class="prose">
+  <h2>1. Introduction</h2>
+  <p>Elastica ("we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect when you visit this website, how we use it, and the choices available to you. By using this site, you agree to the practices described here.</p>
+
+  <h2>2. Information We Collect</h2>
+  <p>Information you provide directly, such as when you fill out a contact form. Information collected automatically, such as your IP address, browser type, device information, and pages visited — typically gathered through cookies and similar technologies. Information generated when you follow an affiliate link from this site to a third-party seller's order page; any data you provide there is handled under that seller's own privacy policy, not this one.</p>
+
+  <h2>3. How We Use Information</h2>
+  <p>We use the information we collect to operate and improve this website, understand how visitors use our content, respond to inquiries, and measure the performance of our marketing, including advertising campaigns.</p>
+
+  <h2>4. Cookies &amp; Tracking Technologies</h2>
+  <p>This site may use cookies and similar technologies, such as analytics tools or advertising pixels, to understand traffic patterns and measure ad performance. You can control cookies through your browser settings; disabling them may affect how the site functions.</p>
+
+  <h2>5. Third-Party Links</h2>
+  <p>This website contains affiliate links. If you click through to place an order, that third-party site's own privacy policy governs how your information is collected and used there. We encourage you to review it before providing any personal information.</p>
+
+  <h2>6. Data Security</h2>
+  <p>We take reasonable measures to help protect the information collected through this site, but no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+  <h2>7. Your Rights</h2>
+  <p>Depending on where you live, you may have rights to access, correct, or request deletion of your personal information. To make a request, contact us using the details below.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>This site is not directed at children, and we do not knowingly collect personal information from children.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.</p>
+
+  <hr class="part-divider">
+  <h2 class="part-title">Terms &amp; Conditions</h2>
+  <p class="part-date">Last updated: 25 May 2018</p>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By accessing or using this website, you agree to be bound by these Terms &amp; Conditions. If you do not agree, please do not use this site.</p>
+
+  <h2>2. Use of This Site</h2>
+  <p>This site is provided for informational and marketing purposes. You agree to use it only for lawful purposes and not to misuse, disrupt, or attempt unauthorized access to any part of it.</p>
+
+  <h2>3. Product Information</h2>
+  <div class="callout">Elastica is a cosmetic skincare product intended for external use as part of a general skincare routine. It is not intended to diagnose, treat, cure, or prevent any disease or medical condition.</div>
+  <p>Nothing on this site constitutes medical advice. Please consult a qualified healthcare professional with any medical questions or concerns.</p>
+
+  <h2>4. Affiliate Disclosure &amp; Orders</h2>
+  <p>This website contains affiliate links. Orders placed through these links are processed by a third-party seller, not by us directly; that seller's own terms govern the sale, shipping, delivery, and any returns.</p>
+
+  <h2>5. Intellectual Property</h2>
+  <p>The text, design, and graphics on this site are provided for this website's use and may not be copied or reproduced without permission.</p>
+
+  <h2>6. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of this site or any product purchased through an affiliate link.</p>
+
+  <h2>7. Changes to These Terms</h2>
+  <p>We may update these Terms &amp; Conditions at any time. Continued use of the site after changes means you accept the updated terms.</p>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">Elastica</div>
+      <nav class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy &amp; Terms</a>
+      </nav>
+    </div>
+    <p class="disclosure">This website contains affiliate links. If you purchase through these links, we may earn a commission at no additional cost to you.</p>
+    <p class="copyright">© 2026 Elastica. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  var burgerBtn = document.getElementById('burgerBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', function () {
+    var isOpen = mobileMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
+
+</body>
+</html>

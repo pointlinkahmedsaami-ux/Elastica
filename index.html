@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elastica — Crema para Piernas</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="Elastica es una crema ligera y de rápida absorción para el cuidado diario de las piernas, pensada para lucir y sentir la piel más suave, tersa y renovada.">
+<meta property="og:title" content="Elastica — Siéntete Más Cómoda y Segura Cada Día">
+<meta property="og:description" content="Una crema ligera de uso diario para piernas más suaves y con mejor apariencia.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Add your Facebook Pixel / analytics tracking code here -->
+<style>
+  :root{
+    --ink:#3B2A52;
+    --violet:#7B5CA6;
+    --violet-deep:#4E3670;
+    --violet-soft:#9A80C4;
+    --lavender:#F3ECFB;
+    --sage:#6FA98A;
+    --sage-deep:#4C8A6C;
+    --sage-pale:#E8F4EE;
+    --paper:#FFFDFA;
+    --text:#5B5468;
+    --text-soft:#847CA0;
+    --border:#E9E1F5;
+    --shadow-sm:0 2px 12px rgba(59,42,82,.08);
+    --shadow-md:0 12px 32px rgba(59,42,82,.14);
+    --r-sm:12px;
+    --r-md:20px;
+    --r-lg:32px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Karla',sans-serif;
+    color:var(--text);
+    background:var(--paper);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',serif;color:var(--ink);line-height:1.18;font-weight:600;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    color:var(--violet);font-size:15px;letter-spacing:.02em;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--sage);display:inline-block;}
+  .section-title{font-size:clamp(28px,4vw,40px);margin-bottom:14px;}
+  .section-sub{color:var(--text-soft);font-size:17px;max-width:520px;margin-bottom:52px;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+  a:focus-visible,button:focus-visible,summary:focus-visible{
+    outline:2.5px solid var(--sage-deep);outline-offset:3px;border-radius:6px;
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important;}
+  }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-weight:700;font-size:16px;padding:17px 38px;border-radius:999px;
+    border:none;transition:transform .18s ease, box-shadow .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:linear-gradient(135deg,var(--violet),var(--violet-deep));color:#fff;box-shadow:var(--shadow-md);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(59,42,82,.22);}
+  .btn-green{background:linear-gradient(135deg,var(--sage),var(--sage-deep));color:#fff;box-shadow:0 12px 30px rgba(76,138,108,.28);}
+  .btn-green:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(76,138,108,.34);}
+  .btn-outline{background:transparent;color:var(--violet-deep);border:1.5px solid var(--violet-soft);padding:10px 24px;font-size:15px;}
+  .btn-outline:hover{background:var(--lavender);}
+  .btn svg{width:18px;height:18px;flex-shrink:0;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,253,250,.9);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+  }
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1160px;margin:0 auto;}
+  .logo{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px;}
+  .logo svg{width:26px;height:26px;}
+  .nav-links{display:flex;align-items:center;gap:36px;}
+  .nav-links a:not(.btn){font-weight:600;font-size:15px;color:var(--ink);position:relative;}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--sage);transform:scaleX(0);transition:transform .2s ease;}
+  .nav-links a:not(.btn):hover::after{transform:scaleX(1);}
+  .nav-cta{display:flex;align-items:center;gap:20px;}
+  .nav-cta .btn{padding:12px 26px;font-size:14px;}
+  .burger{display:none;background:none;border:none;padding:6px;}
+  .burger svg{width:26px;height:26px;color:var(--ink);}
+  .mobile-menu{display:none;flex-direction:column;gap:2px;padding:8px 24px 20px;border-top:1px solid var(--border);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:12px 0;font-weight:600;color:var(--ink);border-bottom:1px solid var(--border);}
+  .mobile-menu .btn{margin-top:14px;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .nav-cta .btn{display:none;}
+    .burger{display:block;}
+  }
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:76px 0 100px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2;}
+  .hero h1{font-size:clamp(34px,5vw,56px);margin-bottom:22px;}
+  .hero p.lead{font-size:18px;color:var(--text);max-width:480px;margin-bottom:34px;}
+  .trust-row{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--violet-deep);}
+  .trust-item svg{width:18px;height:18px;color:var(--sage-deep);flex-shrink:0;}
+  .hero-thread{position:absolute;top:-40px;right:-60px;width:640px;max-width:none;z-index:1;opacity:.9;}
+  .product-frame{
+    position:relative;border-radius:var(--r-lg);aspect-ratio:4/5;
+    background:linear-gradient(150deg,var(--lavender),var(--sage-pale));
+    display:flex;align-items:center;justify-content:center;
+    padding:30px;box-shadow:var(--shadow-sm);
+  }
+  .product-frame img{width:100%;height:100%;object-fit:contain;border-radius:14px;display:block;}
+  .badge-float{
+    position:absolute;bottom:-18px;left:-18px;background:#fff;border-radius:999px;
+    box-shadow:var(--shadow-md);padding:12px 20px;display:flex;align-items:center;gap:10px;
+  }
+  .badge-float svg{width:22px;height:22px;color:var(--sage-deep);}
+  .badge-float b{font-family:'Fraunces',serif;font-size:15px;color:var(--ink);}
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-thread{display:none;}
+    .product-frame{max-width:360px;margin:0 auto;}
+  }
+
+  /* Sections generic */
+  .section{padding:96px 0;}
+  .bg-lavender{background:var(--lavender);}
+  .bg-sage{background:var(--sage-pale);}
+
+  /* Why choose */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;padding-top:34px;}
+  .why-thread{position:absolute;top:34px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--violet),var(--sage));z-index:0;}
+  .why-card{position:relative;z-index:1;background:var(--paper);border:1px solid var(--border);border-radius:var(--r-md);padding:30px 22px;text-align:center;box-shadow:var(--shadow-sm);}
+  .why-icon{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--sage));display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+  .why-icon svg{width:26px;height:26px;color:#fff;}
+  .why-card h3{font-size:17px;margin-bottom:8px;}
+  .why-card p{font-size:14.5px;color:var(--text-soft);}
+  @media (max-width:900px){
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .why-thread{display:none;}
+  }
+  @media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+
+  /* How to use */
+  .steps{max-width:640px;margin:0 auto;position:relative;padding-left:76px;}
+  .steps::before{content:"";position:absolute;left:23px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--violet),var(--sage));}
+  .step{position:relative;margin-bottom:44px;}
+  .step:last-child{margin-bottom:0;}
+  .step-num{
+    position:absolute;left:-76px;top:0;width:48px;height:48px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--violet);color:var(--violet-deep);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:18px;
+    box-shadow:0 0 0 6px var(--paper);
+  }
+  .step h3{font-size:18px;margin-bottom:6px;}
+  .step p{font-size:15px;color:var(--text-soft);}
+  @media (max-width:560px){.steps{padding-left:60px;}.step-num{left:-60px;width:40px;height:40px;font-size:16px;}.steps::before{left:19px;}}
+
+  /* Reviews */
+  .disclaimer-banner{
+    background:var(--lavender);border:1px solid var(--violet-soft);border-radius:var(--r-sm);
+    padding:16px 22px;font-size:14px;color:var(--violet-deep);font-weight:600;
+    max-width:640px;margin:0 auto 44px;text-align:center;
+  }
+  .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+  .review-card{background:var(--paper);border:1px solid var(--border);border-radius:var(--r-md);padding:28px;box-shadow:var(--shadow-sm);}
+  .review-card svg.quote{width:26px;height:26px;color:var(--sage);margin-bottom:14px;}
+  .review-card p{font-size:15px;color:var(--text);margin-bottom:20px;}
+  .review-person{display:flex;align-items:center;gap:12px;}
+  .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--sage));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:15px;flex-shrink:0;}
+  .review-person b{display:block;font-size:14.5px;color:var(--ink);}
+  .review-person span{font-size:13px;color:var(--text-soft);}
+
+  /* Offer */
+  .offer{background:linear-gradient(135deg,var(--violet-deep),var(--ink));border-radius:var(--r-lg);padding:64px 44px;text-align:center;color:#fff;position:relative;overflow:hidden;}
+  .offer::before{content:"";position:absolute;width:420px;height:420px;background:radial-gradient(circle,rgba(111,169,138,.35),transparent 70%);top:-160px;right:-120px;}
+  .offer-badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:22px;position:relative;z-index:1;}
+  .offer h2{color:#fff;font-size:clamp(40px,7vw,72px);margin-bottom:16px;position:relative;z-index:1;}
+  .offer p{color:rgba(255,255,255,.85);font-size:17px;max-width:480px;margin:0 auto 34px;position:relative;z-index:1;}
+  .offer .btn{position:relative;z-index:1;}
+  @media (max-width:560px){
+    .offer{padding:48px 22px;}
+    .offer h2{font-size:clamp(32px,10vw,52px);}
+    .offer .btn{width:100%;padding:18px 20px;}
+  }
+
+  /* FAQ */
+  .faq-list{max-width:720px;margin:0 auto;}
+  details{background:var(--paper);border:1px solid var(--border);border-radius:var(--r-sm);margin-bottom:14px;overflow:hidden;}
+  summary{
+    list-style:none;cursor:pointer;padding:20px 24px;font-weight:700;color:var(--ink);
+    display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary svg{width:20px;height:20px;color:var(--violet);flex-shrink:0;transition:transform .2s ease;}
+  details[open] summary svg{transform:rotate(180deg);}
+  details p{padding:0 24px 22px;font-size:15px;color:var(--text-soft);}
+
+  /* Footer */
+  footer{background:var(--ink);color:rgba(255,255,255,.72);padding:56px 0 100px;}
+  .footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;margin-bottom:36px;}
+  .footer-logo{font-family:'Fraunces',serif;font-size:22px;color:#fff;margin-bottom:10px;}
+  .footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+  .footer-links a{font-size:14px;font-weight:600;color:rgba(255,255,255,.8);}
+  .footer-links a:hover{color:#fff;}
+  .disclosure{font-size:13px;line-height:1.7;color:rgba(255,255,255,.55);max-width:720px;border-top:1px solid rgba(255,255,255,.15);padding-top:24px;margin-bottom:18px;}
+  .copyright{font-size:12.5px;color:rgba(255,255,255,.45);}
+
+  /* Sticky mobile CTA */
+  .mobile-cta{display:none;}
+  @media (max-width:760px){
+    .mobile-cta{
+      display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+      background:#fff;border-top:1px solid var(--border);padding:12px 16px;
+      box-shadow:0 -8px 24px rgba(59,42,82,.12);
+    }
+    .mobile-cta .btn{width:100%;padding:15px;}
+    footer{padding-bottom:110px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#home" class="logo" aria-label="Elastica, página de inicio">
+      Elastica
+    </a>
+    <nav class="nav-links">
+      <a href="#why">Por Qué Elastica</a>
+      <a href="#how">Cómo Usar</a>
+      <a href="#reviews">Opiniones</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">Ordenar Ahora</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#why">Por Qué Elastica</a>
+    <a href="#how">Cómo Usar</a>
+    <a href="#reviews">Opiniones</a>
+    <a href="#faq">Preguntas</a>
+    <a class="btn btn-primary" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">Ordenar Ahora</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <svg class="hero-thread" viewBox="0 0 640 560" fill="none">
+      <path d="M40 40C220 90 120 220 300 260C480 300 400 440 560 500" stroke="url(#threadGrad)" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="40" cy="40" r="5" fill="#7B5CA6"/>
+      <circle cx="300" cy="260" r="5" fill="#8C9F79"/>
+      <circle cx="560" cy="500" r="5" fill="#6FA98A"/>
+      <defs><linearGradient id="threadGrad" x1="0" y1="0" x2="640" y2="560"><stop offset="0" stop-color="#7B5CA6"/><stop offset="1" stop-color="#6FA98A"/></linearGradient></defs>
+    </svg>
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Cuidado Diario de Piernas</span>
+        <h1>Siéntete Más Cómoda y Segura Cada Día</h1>
+        <p class="lead">Elastica es una crema ligera para el cuidado de la piel, pensada para quienes quieren que sus piernas luzcan y se sientan más suaves, tersas y renovadas, día tras día.</p>
+        <a class="btn btn-primary" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">
+          Ordenar Ahora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Envío Rápido
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Pago Contra Entrega Disponible
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="product-frame">
+          <img src="assets/elastica-product.jpg" alt="Caja y tubo de la crema para piernas Elastica" width="722" height="1600">
+          <div class="badge-float">
+            <b>Fórmula ligera</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section bg-lavender" id="why">
+    <div class="container">
+      <span class="eyebrow center" style="display:flex;justify-content:center;">Por Qué Elastica</span>
+      <h2 class="section-title center">Hecha para Simplificar tu Día, No Complicarlo</h2>
+      <p class="section-sub center">Todo en Elastica está pensado alrededor de una idea: un cuidado de la piel tan simple que realmente puedas mantener.</p>
+      <div class="why-grid">
+        <span class="why-thread" aria-hidden="true"></span>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.2 6 7.6 6 10.5a6 6 0 1 1-12 0C6 10.6 8.5 7.2 12 3Z"/></svg></div>
+          <h3>Ligera y No Grasosa</h3>
+          <p>Se absorbe rápido y sin dejar residuos pegajosos, para que sigas con tu día.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 1 1 8 0"/><path d="M12 12v6M9 21h6"/></svg></div>
+          <h3>Fácil de Aplicar</h3>
+          <p>Un paso simple para tu rutina: aplica y listo.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></div>
+          <h3>Apta para Uso Diario</h3>
+          <p>Formulada para uso diario, como parte de tu ritual de cuidado personal.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V7a1 1 0 0 1 1-1h9v10"/><path d="M13 10h4l3 3v3h-2"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
+          <h3>Envío Rápido y Pago Contra Entrega</h3>
+          <p>Entrega rápida con pago contra entrega disponible en ubicaciones seleccionadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="section" id="how">
+    <div class="container">
+      <span class="eyebrow center" style="display:flex;justify-content:center;">La Rutina</span>
+      <h2 class="section-title center">Cuatro Pasos Simples</h2>
+      <p class="section-sub center" style="margin-left:auto;margin-right:auto;">Sin rutinas complicadas: solo unos minutos, cuando mejor te acomode.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Limpia y Seca</h3>
+          <p>Limpia y seca bien la piel antes de aplicar.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Aplica</h3>
+          <p>Aplica una pequeña cantidad de Elastica en la zona deseada.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Masajea</h3>
+          <p>Masajea suavemente hasta que se absorba por completo.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Repite a Diario</h3>
+          <p>Úsala de manera constante, según las instrucciones del empaque, para mejores resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section bg-sage" id="reviews">
+    <div class="container">
+      <span class="eyebrow center" style="display:flex;justify-content:center;">Comunidad</span>
+      <h2 class="section-title center">Lo Que Dicen las Personas</h2>
+      <div class="disclaimer-banner">
+        Los testimonios a continuación son ejemplos ilustrativos, escritos con fines de demostración. No corresponden a reseñas de clientes verificadas.
+      </div>
+      <div class="review-grid">
+        <div class="review-card">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H6c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v5h5v-5h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p>"Elastica ya es parte de mi rutina nocturna. Siento mis piernas mucho más suaves y renovadas antes de dormir."</p>
+          <div class="review-person">
+            <div class="avatar">C</div>
+            <div><b>Camila R.</b><span>Lima, Perú</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H6c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v5h5v-5h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p>"Me encanta lo ligera que es: no deja residuos grasosos y se absorbe muy rápido."</p>
+          <div class="review-person">
+            <div class="avatar">S</div>
+            <div><b>Sofía M.</b><span>Arequipa, Perú</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H6c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v5h5v-5h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p>"Es facilísimo de incorporar a mi día. Me la aplico justo después de ducharme y en segundos ya está."</p>
+          <div class="review-person">
+            <div class="avatar">V</div>
+            <div><b>Valentina G.</b><span>Cusco, Perú</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H6c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v5h5v-5h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p>"La opción de pago contra entrega hizo que fuera fácil animarme a probarlo, y la entrega llegó más rápido de lo que esperaba."</p>
+          <div class="review-person">
+            <div class="avatar">A</div>
+            <div><b>Andrea T.</b><span>Trujillo, Perú</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor"><path d="M7 8c-2.2 0-4 1.8-4 4v5h5v-5H6c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v5h5v-5h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p>"Mi piel se siente notablemente más suave desde que la uso a diario. Es un pequeño ritual muy agradable."</p>
+          <div class="review-person">
+            <div class="avatar">R</div>
+            <div><b>Rosa P.</b><span>Lima, Perú</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL OFFER -->
+  <section class="section">
+    <div class="container">
+      <div class="offer">
+        <span class="offer-badge">Oferta por Tiempo Limitado</span>
+        <h2>50% DE DESCUENTO</h2>
+        <p>Consigue Elastica a mitad de precio mientras dure esta oferta. El pago contra entrega está disponible en ubicaciones seleccionadas: paga solo cuando recibas tu pedido.</p>
+        <a class="btn btn-green" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">
+          Reclamar 50% de Descuento
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <span class="eyebrow center" style="display:flex;justify-content:center;">Preguntas</span>
+      <h2 class="section-title center">Preguntas Frecuentes</h2>
+      <p class="section-sub center" style="margin-left:auto;margin-right:auto;">Todo lo que necesitas saber antes de ordenar.</p>
+      <div class="faq-list">
+        <details>
+          <summary>¿Qué es Elastica?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Elastica es una crema ligera para el cuidado de la piel, diseñada para el cuidado diario de las piernas. Está formulada para sentirse suave y cómoda sobre la piel, y se integra fácilmente en tu rutina diaria de cuidado personal.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se usa?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Limpia y seca la piel, aplica una pequeña cantidad en la zona deseada y masajea suavemente hasta que se absorba por completo. Para mejores resultados, úsala de manera constante según las instrucciones del empaque.</p>
+        </details>
+        <details>
+          <summary>¿Cuándo llega mi pedido?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Los tiempos de entrega varían según tu ubicación. Los pedidos suelen procesarse rápidamente, y verás una fecha estimada de entrega antes de confirmar tu pedido.</p>
+        </details>
+        <details>
+          <summary>¿Está disponible el pago contra entrega?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>El pago contra entrega está disponible en ubicaciones seleccionadas. Podrás ver si aplica para tu dirección durante el proceso de compra.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Elastica</div>
+      </div>
+      <nav class="footer-links">
+        <a href="privacy-policy.html">Privacidad y Términos</a>
+      </nav>
+    </div>
+    <p class="disclosure">Este sitio web contiene enlaces de afiliados. Si realizas una compra a través de estos enlaces, podríamos recibir una comisión sin costo adicional para ti.</p>
+    <p class="copyright">© 2026 Elastica. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-primary" href="https://idfzxd.pro/forms/?target=-7EBNQCgQAAAcVGgUD7okABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&amp;bg_color=d0d9da&amp;text_color=000000&amp;btn_color=ff3333&amp;btn_text_color=ffffff&amp;btn_shdw=990000&amp;bg_opacity=1&amp;form_width=100&amp;name_width=100&amp;phone_width=100&amp;btn_font=22&amp;btn_font_pos=12px%2050px&amp;btn_edit_text=Place%20order&amp;name_pos=margin-right&amp;phone_pos=margin-right&amp;button_pos=margin-right">Ordenar Ahora — 50% Dcto.</a>
+</div>
+
+<script>
+  var burgerBtn = document.getElementById('burgerBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', function () {
+    var isOpen = mobileMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
